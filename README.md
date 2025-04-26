@@ -33,7 +33,7 @@
 | Role | Capabilities | Special Access |
 |------|-------------|----------------|
 | Admin | All device controls | 👥 User Management ⚡ Energy Monitoring |
-| Regular User | All device controls | - |
+| Regular User | All device controls | You Ain't him Brdr |
 
 ### User Operations
 - ➕ Add new users
