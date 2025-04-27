@@ -139,3 +139,44 @@ classDiagram
     User <|-- RegularUser
     User <|-- Admin
 ```
+## Execution Flow
+- Application starts (Main.java)
+
+- Authentication screen appears
+
+- User logs in with credentials
+
+- Appropriate menu shown based on role
+
+- User interacts with devices
+
+- System persists changes where needed
+
+- User logs out or exits
+
+## Technical Highlights
+### OOP Principles:
+
+- Inheritance (Device → Light/Fan/AC)
+
+- Polymorphism (User → Admin/RegularUser)
+
+- Encapsulation (private fields with public methods)
+
+- Abstraction (abstract classes)
+
+### Security Features:
+
+- Password hashing
+
+- Role-based access control
+
+- Secure credential storage
+
+### Automation:
+
+- Event-driven responses
+
+- Configurable triggers
+
+- Multi-device coordination
