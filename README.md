@@ -80,69 +80,11 @@ flowchart TD
     F --> F2[Remove]
     F --> F3[List]
 ```
-## Technical Architecture
-```mermaid
-classDiagram
-    class Device{
-        <<abstract>>
-        +String name
-        +boolean isOn
-        +double powerConsumption
-        +turnOn()
-        +turnOff()
-        +displayStatus()
-    }
-    
-    class Light{
-        +int brightness
-        +setBrightness()
-    }
-    
-    class Fan{
-        +int speed
-        +setSpeed()
-    }
-    
-    class AC{
-        +int temperature
-        +String mode
-        +setTemperature()
-        +setMode()
-    }
-    
-    class SecuritySystem{
-        +boolean motionDetected
-        +boolean alarmOn
-        +detectMotion()
-        +setAlarm()
-    }
-    
-    class User{
-        <<abstract>>
-        +String username
-        +controlDevice()
-    }
-    
-    class RegularUser{
-        +controlDevice()
-    }
-    
-    class Admin{
-        +checkEnergyConsumption()
-        +userManagement()
-    }
-    
-    Device <|-- Light
-    Device <|-- Fan
-    Device <|-- AC
-    Device <|-- SecuritySystem
-    User <|-- RegularUser
-    User <|-- Admin
-```
+
 ## Execution Flow
 - Application starts (Main.java)
 
-- Authentication screen appears
+- The authentication screen appears
 
 - User logs in with credentials
 
