@@ -1,7 +1,7 @@
 # Smart Home Automation System - Features
 
 ## 🏠 Room-Based Device Control
-
+- A Java-based Smart Home Automation System that allows users to control IoT devices (lights, fans, ACs, security systems) via a **`console-based interface`**.
 ### Living Room
 - 💡 Smart Light (On/Off + Brightness 0-100%)
 - ❄️ Air Conditioner (Temp Control + Cool/Heat/Fan modes)
