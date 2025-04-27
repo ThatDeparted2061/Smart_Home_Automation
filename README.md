@@ -180,3 +180,44 @@ classDiagram
 - Configurable triggers
 
 - Multi-device coordination
+### Code snippets
+- Authentication & Security
+- Password Hashing (SHA-256)
+``` java
+// Hashing logic in Authentication.java
+MessageDigest md = MessageDigest.getInstance("SHA-256");
+byte[] hashedBytes = md.digest(password.getBytes());
+```
+- Secure Password Input
+```java
+// Masks input with '*' in IDEs, hides completely in terminals
+if (System.console() != null) {
+    return new String(System.console().readPassword());
+}
+```
+- Device Control Logic
+- Light Class Example
+```java
+public class Light extends Device {
+    private int brightness; // 0-100%
+
+    public void setBrightness(int level) {
+        if (level >= 0 && level <= 100) {
+            this.brightness = level;
+            System.out.println(name + " brightness set to " + level + "%");
+        }
+    }
+}
+```
+- Automation & Event Handling
+
+- Motion Detection Workflow
+```java
+// In SecuritySystem.java
+public void detectMotion() {
+    if (isOn) {
+        livingRoomLight.turnOn();
+        livingRoomLight.setBrightness(100);
+    }
+}
+```
