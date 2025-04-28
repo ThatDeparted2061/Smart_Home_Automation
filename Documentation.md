@@ -136,3 +136,26 @@ public class Admin extends RegularUser {
 - Inherits from `RegularUser` while adding **admin-only features**.
 
 ---
+## 🚀 How It All Works Together
+Startup Sequence:
+
+```mermaid
+sequenceDiagram
+    Main->>Authentication: Login()
+    Authentication->>File: Read users.txt
+    File-->>Authentication: Verify credentials
+    Authentication-->>Main: User object
+```
+### Device Control Flow:
+
+```java
+// Sample command execution
+user.controlDevice(light, "SET BRIGHTNESS 75");
+light.setBrightness(75);  // Calls overloaded method
+```
+### Automation Trigger:
+```bash
+1. Motion detected → SecuritySystem.detectMotion()
+2. Alarm.triggerAlarm() executes
+3. The lights automatically turn on
+```
