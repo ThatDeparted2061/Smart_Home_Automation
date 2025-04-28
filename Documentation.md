@@ -32,7 +32,22 @@ Main Menu → Select Room → Device Control → Enter Command
 - **Security:** `ARM/DISARM`, `TRIGGER MOTION`
 
 ---
-
+# 🔧 Implementation Details
+## Core Architecture
+```mermaid
+classDiagram
+    class Device{
+        <<abstract>>
+        -String name
+        -boolean isOn
+        +turnOn()
+        +turnOff()
+    }
+    Device <|-- Light
+    Device <|-- SecuritySystem
+    User <|-- Admin
+    User <|-- RegularUser
+```
 ## 💡 Device Control System
 
 ### Light Device Implementation
